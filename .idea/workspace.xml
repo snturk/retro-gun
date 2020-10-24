@@ -20,12 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5c1d831-1de8-472e-9298-873a054579c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/character.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/game-controller.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/shoot.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pygame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pygame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -57,9 +55,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -99,29 +97,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603543215548">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603543987217">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1603543215548" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1603543189671">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1603543987217" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1603543877734">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603543189671" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603543877734" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/58.23.1382.877@58.23.1382.877" timestamp="1603542880691" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1603543189669">
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1603543877732">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603543189669" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603543877732" />
     <state width="1419" height="245" key="GridCell.Tab.0.center/58.23.1382.877@58.23.1382.877" timestamp="1603542880688" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1603543189668">
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1603543877731">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603543189668" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603543877731" />
     <state width="1419" height="245" key="GridCell.Tab.0.left/58.23.1382.877@58.23.1382.877" timestamp="1603542880687" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1603543189670">
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1603543877733">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603543189670" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603543877733" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/58.23.1382.877@58.23.1382.877" timestamp="1603542880689" />
     <state width="1419" height="304" key="GridCell.Tab.1.bottom" timestamp="1603399107903">
       <screen x="0" y="0" width="1440" height="900" />
@@ -139,10 +137,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1419" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1603399107902" />
-    <state x="229" y="89" key="SettingsEditor" timestamp="1603389044536">
+    <state x="229" y="89" key="SettingsEditor" timestamp="1603544018120">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603389044536" />
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603544018120" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603543343712">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603543343712" />
     <state x="385" y="196" key="search.everywhere.popup" timestamp="1603459500603">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
