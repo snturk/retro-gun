@@ -4,7 +4,7 @@ import sys
 
 pygame.init()
 
-pygame.display.set_caption("HAHA")
+pygame.display.set_caption("retrogun")
 
 myfont = pygame.font.SysFont("monospace", 23)
 
