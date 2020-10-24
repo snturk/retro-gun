@@ -1,4 +1,7 @@
-import sys, pygame, random
+import pygame
+import random
+import sys
+
 pygame.init()
 
 pygame.display.set_caption("HAHA")
