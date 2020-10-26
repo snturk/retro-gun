@@ -33,7 +33,6 @@ circles = []
 enemyX, enemyY = 40, 70
 
 
-
 def player(x, y):
     screen.blit(shape, (x, y))
 
@@ -51,6 +50,7 @@ def createCircle():
     b = random.randint(120, 255)
     circles.append([circleX, circleY, diameter, (r, g, b)])
 
+
 def createEnemy():
     screen.blit(enemy, (enemyX, enemyY))
 
@@ -67,10 +67,16 @@ def checkCollision(x1, y1, x2, y2, w1, h1, w2, h2):
     if xColl and yColl:
         return 1
     return 0
+
+
 while enemyHealth > 0:
     screen.fill(black)
-    label = myfont.render(str(enemyHealth), 1, (255, 255, 255))
-    screen.blit(label, (30, 30))
+    health = myfont.render("HP: " + str(enemyHealth), 1, (255, 255, 255))
+    screen.blit(health, (30, 30))
+
+    msg = myfont.render("PRESS ENTER TO SHOOT", 1, (255, 255, 255))
+    screen.blit(msg, (560, 30))
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -101,7 +107,6 @@ while enemyHealth > 0:
 
     if enemyX > 570 or enemyX < 20:
         enemyVelocity *= -1
-
 
     createEnemy()
     player(shapeX, shapeY)
