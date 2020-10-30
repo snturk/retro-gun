@@ -25,12 +25,8 @@ shapeX = 560
 shapeY = 500
 circleX = 0
 circleY = 0
-velocity = 3
-enemyVelocity = 1
-enemyHealth = 100
-circles = []
 
-enemyX, enemyY = 40, 70
+screen = pygame.display.set_mode([800, 700])
 
 
 def player(x, y):
@@ -41,7 +37,6 @@ def drawCircle(x, y, diameter, color=(255, 0, 0)):
     pygame.draw.circle(screen, color, [x, y], diameter, 5)
 
 
-def createCircle():
     circleX = shapeX + 70
     circleY = shapeY - 20
     diameter = 10
@@ -69,46 +64,80 @@ def checkCollision(x1, y1, x2, y2, w1, h1, w2, h2):
     return 0
 
 
-while enemyHealth > 0:
-    screen.fill(black)
-    health = myfont.render("HP: " + str(enemyHealth), 1, (255, 255, 255))
-    screen.blit(health, (30, 30))
+def mainMenu():
+    while True:
+        pygame.mixer.Sound.play(backgroundSound)
+        pygame.mixer.Sound.set_volume(backgroundSound, 0.009)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
 
-    msg = myfont.render("PRESS ENTER TO SHOOT", 1, (255, 255, 255))
-    screen.blit(msg, (560, 30))
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    game(shapeX, shapeY)
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            sys.exit()
+        screen.fill(black)
+        pygame.draw.rect(screen, (65, 96, 120), [175, 200, 450, 70])
+        startMsg = menuFont.render("PRESS ENTER FOR START", 1, (255, 255, 255))
+        screen.blit(startMsg, (200, 220))
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RETURN:
-                pygame.mixer.Sound.play(shootSound)
-                createCircle()
 
-    shapeX += velocity
-    enemyX += enemyVelocity
+        pygame.display.update()
 
-    for circle in circles:
-        i = 0
-        drawCircle(circle[0], circle[1], circle[2], color=circle[3])
-        circle[1] -= 7
-        circle[2] += 0.4
-        if circle[1] < -10:
-            circles.pop(0)
 
-        if checkCollision(circle[0], circle[1], enemyX, enemyY, 10, 10, 70, 70):
-            circles.pop(circles.index(circle))
-            enemyHealth -= 5
-        i += 1
+def game(shapeX, shapeY):
 
-    if shapeX > 570 or shapeX < 20:
-        velocity *= -1
+    velocity = 3
+    enemyVelocity = 1
+    circles = []
+    enemyX, enemyY = 40, 70
+    enemyHealth = 100
 
-    if enemyX > 570 or enemyX < 20:
-        enemyVelocity *= -1
+    while enemyHealth > 0:
+        screen.fill(black)
+        health = gameFont.render("HP: " + str(enemyHealth), 1, (255, 255, 255))
+        screen.blit(health, (30, 30))
 
-    createEnemy()
-    player(shapeX, shapeY)
+        pygame.mixer.Sound.play(backgroundSound)
+        pygame.mixer.Sound.set_volume(backgroundSound, 0.01)
 
-    pygame.display.update()
+        msg = gameFont.render("PRESS ENTER TO SHOOT", 1, (255, 255, 255))
+        screen.blit(msg, (560, 30))
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    pygame.mixer.Sound.play(shootSound)
+                    createCircle(shapeX, shapeY, circles)
+
+        shapeX += velocity
+        enemyX += enemyVelocity
+
+        for circle in circles:
+            i = 0
+            drawCircle(circle[0], circle[1], circle[2], color=circle[3])
+            circle[1] -= 7
+            circle[2] += 0.4
+            if circle[1] < -10:
+                circles.pop(0)
+
+            if checkCollision(circle[0], circle[1], enemyX, enemyY, 10, 10, 70, 70):
+                circles.pop(circles.index(circle))
+                enemyHealth -= 5
+            i += 1
+
+        if shapeX > 570 or shapeX < 20:
+            velocity *= -1
+
+        if enemyX > 570 or enemyX < 20:
+            enemyVelocity *= -1
+
+        createEnemy(enemyX, enemyY)
+        player(shapeX, shapeY)
+
+        pygame.display.update()
+
+mainMenu()
