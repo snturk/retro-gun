@@ -6,9 +6,11 @@ pygame.init()
 
 pygame.display.set_caption("retrogun")
 
-myfont = pygame.font.SysFont("monospace", 23)
+gameFont = pygame.font.SysFont("None", 23)
+menuFont = pygame.font.SysFont("Serif", 44)
 
 shootSound = pygame.mixer.Sound("sounds/shoot.wav")
+backgroundSound = pygame.mixer.Sound("sounds/background.wav")
 
 shape = pygame.image.load('images/game-controller.png')
 shape = pygame.transform.scale(shape, (180, 190))
@@ -19,10 +21,8 @@ enemy = pygame.transform.scale(enemy, (70, 70))
 black = 0, 0, 0
 white = 200, 200, 200
 
-screen = pygame.display.set_mode([800, 700])
+shapeX, shapeY = 180, 500
 
-shapeX = 560
-shapeY = 500
 circleX = 0
 circleY = 0
 
@@ -37,6 +37,7 @@ def drawCircle(x, y, diameter, color=(255, 0, 0)):
     pygame.draw.circle(screen, color, [x, y], diameter, 5)
 
 
+def createCircle(shapeX, shapeY, circles):
     circleX = shapeX + 70
     circleY = shapeY - 20
     diameter = 10
@@ -46,7 +47,7 @@ def drawCircle(x, y, diameter, color=(255, 0, 0)):
     circles.append([circleX, circleY, diameter, (r, g, b)])
 
 
-def createEnemy():
+def createEnemy(enemyX, enemyY):
     screen.blit(enemy, (enemyX, enemyY))
 
 
